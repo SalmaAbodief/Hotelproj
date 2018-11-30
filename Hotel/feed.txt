@@ -1,0 +1,109 @@
+.feedback form {
+        border: 3px solid #f1f1f1;
+        background: rgba(0, 0, 0, 0.5)
+    }
+    
+    input[type=text], input[type=number]{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 2px solid gray;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 15px;
+    }
+    
+    .feedback button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border-radius: 12px;
+        cursor: pointer;
+        width: auto;
+        
+    }
+    
+    .feedback button:hover {
+        opacity: 0.8;
+    }
+    
+    
+    
+    .feedback img.avatar {
+        width: 40%;
+        border-radius: 50%;
+    }
+    
+    .feedback .container {
+        padding: 16px;
+    }
+    
+    .feedback p{
+        text-align: center;
+        color: white;
+        font-size: 50px       
+    }
+    .feedback .backg{
+        background: url(feed.jpg);
+        background-size: cover; 
+    }
+    
+    .feedback h1{
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+        font-size : 50px;
+        color: #000033; 
+    
+    }
+
+
+--------------------------------
+
+
+
+
+
+
+
+
+<div class="feedback">
+        <div style="background-image: url(feed.jpg); background-size: cover">
+            <form>
+                <h1>FEED BACK</h1>
+                <h2 style="text-align: center; color: #00001a">WE ARE INTERESTED IN YOUR OPINION</h2>
+                <div class="container">
+                    <label style="color: white"><b>Full Name</b></label>
+                    <input class="p" type="text" placeholder="Enter Full Name" name="name" required>
+                
+                    <label style="color: white"><b>Phone Number</b></label>
+                    <input type="number" placeholder="Enter Your Phone Number" name="id" required>
+                
+                    <label style="color: white"><b>E-mail Address</b></label>
+                    <input type="number" placeholder="Enter Your E-mail" name="num" required>
+                    
+                    <label style="color: white"><b>Type Your Feed Back</b></label>
+                    <br>
+                    <br>
+                    <textarea name="message" rows="15" cols="100"></textarea>
+                    <br>
+                    <br>
+                        
+                    <button type="submit"; style="font-size:25px"><a href=#home>SEND NOW</a></button>
+                  </div>
+            </form>
+            <br>
+            <br>
+            
+            <form>
+                    <p><b>CONTACT US</b></p>
+                    <h2 style="padding-left: 35%"><b><span style="color: #ffcc00">Phone : </span> <span style="color: white">+90 (10)333-17-11</span> </b> </h2>
+                    <h2 style="padding-left: 35%"><b><span style="color: #ffcc00">E-mail : </span> <span style="color: white">GrandHotel@gmail.com</span> </b> </h2>
+                    <h2 style="padding-left: 35%"><b><span style="color: #ffcc00">Address : </span> <span style="color: white">Assiut, New Assiut City</span> </b> </h2>
+                    <h2 style="padding-left: 35%"><b><span style="color: #ffcc00">Social Media : </span></b> </h2>
+                    <a href="https://www.facebook.com/?ref=tn_tnmn" target="_blank" style="padding-left: 35%"><img width=45px height=45px src="face.png"></a>
+                    <a href="https://www.twitter.com" target="_blank"><img width=100px height=45px src="twit.png"></a>
+            </form>
+        </div>
+    </div>

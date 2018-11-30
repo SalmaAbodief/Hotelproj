@@ -1,0 +1,748 @@
+<html>
+<head>
+    <title>GRAND HOTEL</title>
+    <meta charset="UTF-8">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        .icon-bar {
+            width: 100%;
+                background-color: #00264d;
+                overflow: auto;
+            }
+            .icon-bar a {
+                font-family: 'Lato', sans-serif;
+                float: left;
+                width: 20%;
+                text-align: center;
+                padding: 12px 0;
+                transition: all 0.3s ease;
+                color: white;
+                font-size: 36px;
+                text-decoration: none;
+            }
+            
+            .icon-bar a:hover {
+                background: #0a9dbd;
+                color: #fff;
+            }
+                  
+            
+            .hero-image {
+                background-image: url("hhh.jpg");
+                height: 90%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+            }
+              
+            .hero-text {
+                text-align: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+            }
+              
+            .hero-text button {
+                border: 2px solid white;
+                outline: 0;
+                display: inline-block;
+                padding: 10px 25px;
+                color: white;
+                background-color: #00264d;
+                text-align: center;
+                cursor: pointer;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                overflow: hidden;
+            }
+              
+            .hero-text button:hover {
+                background-color: #0a9dbd;
+                color: black;
+            }
+            
+            .hotel-name{
+                font-size: 50px;
+                color: #ffd633;
+                font-family: 'Lato', sans-serif;
+            }
+            
+            .active {
+                background-color: #0a9dbd;
+                color: white;
+            }
+            
+            .form-but{
+                width: 100%;
+                height: 150px;
+                background: #ffd633;
+                color: white;
+                font-family: 'Lato', sans-serif;
+                font-size: 30px;
+            }
+            .mySlides {display:none}
+    
+    
+    
+    * {box-sizing:border-box}
+        body {font-family: Verdana,sans-serif;margin:0}
+        .mySlides {display:none}
+        
+        /* Slideshow container */
+        .slideshow-container {
+          max-width: 100%;
+          position: relative;
+          margin: auto;
+        }
+        
+       /* /* Next & previous buttons */
+        .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          padding: 16px;
+          margin-top: -22px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+        }
+        
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+        
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+          background-color: rgba(0,0,0,0.8);
+        } 
+        
+        /* Caption text */
+        .text {
+          position: absolute;
+        bottom: 15px;
+        left: 600px;
+        color: white;
+        font-size: 35px;
+        background: rgba(0, 0, 0, 0.6);
+        border: solid;
+        border-color: black;
+        }
+        
+        /* Number text (1/4 etc) */
+        .numbertext {
+          color: white;
+          font-size: 16px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        
+        /* The dots/bullets/indicators */
+        .dot {
+          cursor: pointer;
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+        
+        .active, .dot:hover {
+          background-color: #717171;
+        }
+        
+        /* Fading animation */
+        .fade {
+          -webkit-animation-name: fade;
+          -webkit-animation-duration: 1.5s;
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        
+        @-webkit-keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+          .prev, .next,.text {font-size: 11px}
+        }
+        
+ /*///////////////////////////////////////////////////*/
+ 
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #f1f1f1;
+            padding: 20px;
+            font-family: Arial;
+        }
+        
+        /* Center website */
+        .main {
+            max-width: 1000px;
+            margin: auto;
+        }
+        
+        h1 {
+            font-size: 50px;
+            word-break: break-all;
+        }
+    
+        .row {
+            margin: 10px -16px;
+        }
+        
+        /* Add padding BETWEEN each column */
+        .row,
+        .row > .column {
+            padding: 8px;
+        }
+        
+        /* Create three equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 33.33%;
+            display: none; /* Hide all elements by default */
+        }
+        
+        /* Clear floats after rows */ 
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        /* Content */
+        .content {
+            background-color: white;
+            padding: 10px;
+        }
+        
+        /* The "show" class is added to the filtered elements */
+        .show {
+          display: block;
+        }
+        
+        /* Style the buttons */
+        .btn {
+          border: none;
+          outline: none;
+          padding: 12px 16px;
+          background-color: white;
+          cursor: pointer;
+        }
+        
+        .active, .btn:hover  {
+          background-color: #666;
+          color: white;
+        }
+        
+        .form button {
+                border: 2px solid white;
+                outline: 0;
+                display: inline-block;
+                padding: 10px 25px;
+                color: white;
+                background-color: #ffdb4d;
+                text-align: center;
+                cursor: pointer;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                overflow: hidden;
+            }
+              
+            .form button:hover {
+                background-color: #0a9dbd;
+                color: black;
+            }
+            
+        
+    .columnn {
+        float: left;
+        width: 25%;
+        padding: 10px;
+    }
+    
+    /* Style the images inside the grid */
+    .columnn img {
+        opacity: 0.8; 
+        cursor: pointer; 
+    }
+    
+    .columnn img:hover {
+        opacity: 1;
+    }
+    
+    /* Clear floats after the columns */
+    .rrow:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    /* The expanding image container */
+    .containerr {
+        position: relative;
+        display: none;
+    }
+    
+    /* Expanding image text */
+    #imgtext {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        color: white;
+        font-size: 35px;
+        background: rgba(0, 0, 0, 0.6);
+        border: solid;
+        border-color: black;
+    }
+    
+    /* Closable button inside the expanded image */
+    .closebtnn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: white;
+        font-size: 35px;
+        cursor: pointer;
+    }
+	
+	.feedback form {
+        border: 3px solid #f1f1f1;
+        background: rgba(0, 0, 0, 0.5)
+    }
+    
+    .feedback input[type=text], input[type=number]{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 2px solid gray;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 15px;
+    }
+    
+    .feedback button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border-radius: 12px;
+        cursor: pointer;
+        width: auto;
+        
+    }
+    
+    .feedback button:hover {
+        opacity: 0.8;
+    }
+    
+    
+    
+    .feedback img.avatar {
+        width: 40%;
+        border-radius: 50%;
+    }
+    
+    .feedback .container {
+        padding: 16px;
+    }
+    
+    .feedback p{
+        text-align: center;
+        color: white;
+        font-size: 50px       
+    }
+    .feedback .backg{
+        background: url(feed.jpg);
+        background-size: cover; 
+    }
+    
+    .feedback h1{
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+        font-size : 50px;
+        color: #000033; 
+    
+    }
+    
+
+                
+        </style>
+</head>
+
+<body>
+    <div class="icon-bar" id="home">
+        <a class="active" href="#home">HOME</a>
+        <a href="#room">ROOMS</a>
+        <a href="#food">FOOD</a> 
+        <a href="#facility">FACILITIES</a> 
+        <a href="#feed">FEED BACK</a>
+        
+    </div>
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1 class="hotel-name">GRANDE   HOTEL</h1>
+            <p style="font-size: 25px; font-family: 'Lato', sans-serif"><b>FEEL   LIKE   YOUR   HOME</b></p>
+            <p style="font-size: 20px; color: #ffd633; font-family: 'Lato', sans-serif"><strong>WELCOME   TO   OUR   HOTEL</strong></p>
+            <button><a href="learn.html" target="_blank"><b>LEARN MORE</b></a></button>
+        </div>
+    </div>
+	<div class="hero-text" style="margin-top:250px; margin-left:500px;">
+	<form action="login.php" method="POST">
+    <table width="0%" border="3" cellpadding="2">
+    <tr>
+    <td width="30%">AdminID : </td>
+    <td width="70%"><input type="text" size="20" name="id"/></td>
+    </tr>
+    <tr>
+    <td width="30%">password : </td>
+    <td width="70%"><input type="password" size="20" name="password"/></td>
+    </tr>
+    </div>
+    </table>
+    <input type="submit" name="submit" value="login"/>
+    </form>
+    </div>
+    
+    <div class="form">
+        <button class="form-but"><a href="ReservationForm.html" target="_blank"><b>ROOM RESERVATION</b></a></button>
+    </div>
+    
+    
+    <h1 id="room" style="text-align: center">ROOM CATEGORY</h1>
+    
+    
+    <div class="slideshow-container">
+        
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 4</div>
+          <img src="bed6.jpg" style="width:100%">
+          <div class="text">Suit</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 4</div>
+          <img src="bed1.jpg" style="width:100%">
+          <div class="text">Ordinary</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 4</div>
+          <img src="stan.jpg" style="width:100%">
+          <div class="text">Single</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 4</div>
+          <img src="bed3.jpg" style="width:100%">
+          <div class="text">Double</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)"><img src="pre.png"></a>
+        <a class="next" onclick="plusSlides(1)"><img src="next.png"></a>
+        
+        </div>
+    
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span> 
+        </div>
+        
+        <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length){slideIndex = 1;}    
+          if (n < 1) {slideIndex = slides.length;}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+        
+        <h1 style="text-align: center" id="food">RESTAURANT FOOD</h1>
+        
+        <div id="myBtnContainer" style="text-align: center">
+          <button class="btn" onclick="filterSelection('korean')" style=" width: 150px"> Korean</button>
+          <button class="btn" onclick="filterSelection('indean')" style=" width: 150px"> Indean</button>
+          <button class="btn" onclick="filterSelection('midel east')" style=" width: 150px"> Midel East</button>
+        </div>
+        <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length){slideIndex = 1;}    
+          if (n < 1) {slideIndex = slides.length;}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+        
+        <!-- Portfolio Gallery Grid -->
+        <div class="row">
+          <div class="column korean">
+            <div class="content">
+              <img src="Kimchi.PNG" alt="kimchi" style="width:100%">
+              <h4> Kimchi</h4>
+              <p>Spicy, fermented cabbage.</p>
+            </div>
+          </div>
+          <div class="column korean">
+            <div class="content">
+            <img src="Seolleongtang.PNG" alt="seolleongtang" style="width:100%">
+              <h4>Seolleongtang</h4>
+              <p>Creamy ox bone soup.</p>
+            </div>
+          </div>
+          <div class="column korean">
+            <div class="content">
+            <img src="Hotteok.PNG" alt="hotteok" style="width:100%">
+              <h4>Hotteok</h4>
+              <p>Sweet, brown sugar-filled pancakes.</p>
+            </div>
+          </div>
+          
+          <div class="column indean">
+            <div class="content">
+              <img src="chh.jpg" alt="Chicken Tikka Masala" style="width:100%">
+              <h4>Chicken Tikka Masala</h4>
+              <p>chunks of roasted marinated chicken in a spiced curry.</p>
+            </div>
+          </div>
+          <div class="column indean">
+            <div class="content">
+            <img src="rrrr.jpg" alt="Raita.jpg" style="width:100%">
+              <h4>Raita</h4>
+              <p>cooked vegetables, more seldom fruit.</p>
+            </div>
+          </div>
+          <div class="column indean">
+            <div class="content">
+            <img src="Jalebi.jpg" alt="Jalebi" style="width:100%">
+              <h4>Jalebi</h4>
+              <p>sweet popular in countries of South Asia.</p>
+            </div>
+          </div>
+        
+          <div class="column midel east">
+            <div class="content">
+              <img src="mix.jpg" alt="Mixed Grile" style="width:100%">
+              <h4>Mixed Grile</h4>
+              <p>Mixed Grill - Chicken, Lamb, Mince Meat and Liver Shish </p>
+            </div>
+          </div>
+          <div class="column midel east">
+            <div class="content">
+            <img src="tabb.jpg" alt="Tabouli" style="width:100%">
+              <h4>Tabouli</h4>
+              <p>Traditional food from Lebanon it is called taboula.</p>
+            </div>
+          </div>
+          <div class="column midel east">
+            <div class="content">
+            <img src="cu.jpg" alt="Custard" style="width:100%">
+              <h4>Custard</h4>
+              <p>Layali Lubnan topped with strawberry and banana slices.</p>
+            </div>
+          </div>
+        <!-- END GRID -->
+        </div>
+        
+        <!-- END MAIN -->
+        </div>
+        
+        <script>
+        filterSelection("korean");
+        function filterSelection(c) {
+          var x, i;
+          x = document.getElementsByClassName("column");
+          for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+          }
+        }
+        
+        function w3AddClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+          }
+        }
+        
+        function w3RemoveClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+              arr1.splice(arr1.indexOf(arr2[i]), 1);     
+            }
+          }
+          element.className = arr1.join(" ");
+        }
+        
+        
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+        </script>
+        <div class="form">
+            <button class="form-but"><a href="OrderForm.html" target="_blank"><b>MAKE FOOD ORDER</b></a></button>
+        </div>
+    
+    <h1 id="facility" style="text-align: center">OUR FACILITIES</h1>
+    
+    <div style="text-align:center">
+        <h2>We offer our facilities for you</h2>
+      </div>
+      
+      <!-- The four columns -->
+      
+      
+      <div class="rrow">
+        <div class="columnn">
+          <img src="gym.jpg" alt="Gym" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="columnn">
+          <img src="spa.jpg" alt="Spa" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="columnn">
+          <img src="jac.jpg" alt="Jaccuzy" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="columnn">
+          <img src="occa.jpg" alt="Hall Occasion" style="width:100%" onclick="myFunction(this);">
+        </div>
+      </div>
+      
+      <div class="containerr">
+        <span onclick="this.parentElement.style.display='none'" class="closebtnn">&times;</span>
+        <img id="expandedImg" style="width:100%">
+        <div id="imgtext"></div>
+      </div>
+      
+      <script>
+      function myFunction(imgs) {
+          var expandImg = document.getElementById("expandedImg");
+          var imgText = document.getElementById("imgtext");
+          expandImg.src = imgs.src;
+          imgText.innerHTML = imgs.alt;
+          expandImg.parentElement.style.display = "block";
+      }
+      </script>
+
+    <div class="form">
+            <button class="form-but"><a href="facility.html" target="_blank"><b>FACILITY RESERVATION</b></a></button>
+        </div>
+		
+	<div class="feedback" id="feed">
+        <div style="background-image: url(feed.jpg); background-size: cover">
+            <form>
+                <h1>FEED BACK</h1>
+                <h2 style="text-align: center; color: #00001a">WE ARE INTERESTED IN YOUR OPINION</h2>
+                <div class="container">
+                    <label style="color: white"><b>Full Name</b></label>
+                    <input class="p" type="text" placeholder="Enter Full Name" name="name" required>
+                
+                    <label style="color: white"><b>Phone Number</b></label>
+                    <input type="number" placeholder="Enter Your Phone Number" name="id" required>
+                
+                    <label style="color: white"><b>E-mail Address</b></label>
+                    <input type="number" placeholder="Enter Your E-mail" name="num" required>
+                    
+                    <label style="color: white"><b>Type Your Feed Back</b></label>
+                    <br>
+                    <br>
+                    <textarea name="message" rows="15" cols="100"></textarea>
+                    <br>
+                    <br>
+                        
+                    <button type="submit"; style="font-size:25px"><a href=#home>SEND NOW</a></button>
+                  </div>
+            </form>
+            <br>
+            <br>
+            
+            <form>
+                    <p><b>CONTACT US</b></p>
+                    <h2 style="padding-left: 35%"><b><span style="color: #ffcc00">Phone : </span> <span style="color: white">+90 (10)333-17-11</span> </b> </h2>
+                    <h2 style="padding-left: 35%"><b><span style="color: #ffcc00">E-mail : </span> <span style="color: white">GrandHotel@gmail.com</span> </b> </h2>
+                    <h2 style="padding-left: 35%"><b><span style="color: #ffcc00">Address : </span> <span style="color: white">Assiut, New Assiut City</span> </b> </h2>
+                    <h2 style="padding-left: 35%"><b><span style="color: #ffcc00">Social Media : </span></b> </h2>
+                    <a href="https://www.facebook.com/?ref=tn_tnmn" target="_blank" style="padding-left: 35%"><img width=45px height=45px src="face.png"></a>
+                    <a href="https://www.twitter.com" target="_blank"><img width=100px height=45px src="twit.png"></a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
